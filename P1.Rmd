@@ -1,0 +1,40 @@
+---
+title: "REPRODUCIBLE RESEARCH P1"
+author: "Martin"
+date: "Saturday, October 17, 2015"
+output: html_document
+---
+
+This is an work done for Coursera Course *Reproducible Research* of the [datascience specialization](https://www.coursera.org/specializations/jhudatascience) 
+
+
+
+
+setwd("D:\Lab\Coursera\Reproducible Research\RepData_PeerAssessment1")
+# Download And Unzip Data
+
+# download a zip file containing broadband data, save it to the working directory
+download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip", destfile="Proj1.zip")
+
+# unzip the file
+unzip("Proj1.zip")
+
+# read the data into R
+data <- read.csv("activity.csv")
+
+#Format date
+data$date= strptime(data$date, "%Y-%m-%d")
+
+#Mean per day
+
+library(plyr)
+
+###1
+
+totalsteps= ddply(data, .(date), summarize,  steps=sum(steps))
+
+mean=mean(totalsteps$steps, na.rm=TRUE)
+median= median(totalsteps$steps, na.rm=TRUE)
+hist(totalsteps$steps, breaks=11))
+abline()
+
