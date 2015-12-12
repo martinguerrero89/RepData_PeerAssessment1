@@ -1,7 +1,7 @@
 ---
 title: "REPRODUCIBLE RESEARCH P1"
 author: "Martin"
-date: "Saturday, October 17, 2015"
+date: "Saturday, December 12, 2015"
 output: 
   html_document: 
     keep_md: yes
