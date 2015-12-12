@@ -100,7 +100,7 @@ legend("topright",legend = paste("Maximum steps in",max$interval, "interval", "\
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 
-###Imputing missing values3
+###Imputing missing values
 
 Note that there are a number of days/intervals where there are missing values (coded as `NA`). The presence of missing days may introduce bias into some calculations or summaries of the data.
 Total number of `NA`:
